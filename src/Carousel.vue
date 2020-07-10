@@ -630,7 +630,8 @@ export default {
       );
       for (let i = 0; i < carouselInnerElements.length; i++) {
         if (carouselInnerElements[i].clientWidth > 0) {
-          this.carouselWidth = carouselInnerElements[i].clientWidth || 0;
+          this.carouselWidth = carouselInnerElements[i].getBoundingClientRect().width || 0;
+
         }
       }
       return this.carouselWidth;
